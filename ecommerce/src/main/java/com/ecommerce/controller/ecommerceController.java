@@ -61,7 +61,7 @@ public class ecommerceController {
         return new ResponseEntity(response, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/add-product")
+    @RequestMapping(method = RequestMethod.POST, value = "/update-product")
     public ResponseEntity<ProductDto> updateProduct(@RequestBody ProductDto productDto) {
         ProductDto productDetails = ecommerceService.updateProductDetails(productDto);
         return new ResponseEntity(productDetails, HttpStatus.OK);
